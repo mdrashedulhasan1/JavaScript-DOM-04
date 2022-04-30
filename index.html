@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="my-name" class="bg-change">Myself MD Rashedul Hasan</h1>
+    <h1 class="bg-change">Font End Web Developer</h1>
+    <script>
+        //ID
+        const myname = document.getElementById("my-name");
+        myname.style.color='white';
+        
+        //Tag
+        const textWork = document.getElementsByTagName('h1');
+        for(const h2 of textWork){
+            h2.style.textAlign='center';
+            h2.style.backgroundColor='gray';
+            h2.innerText='I love web development';
+            h2.style.padding='20px',
+            h2.style.border='2px solid red';
+            h2.style.borderRadius='20px'
+        }
+
+        //Class
+        const bgChange = document.getElementsByClassName("bg-change");
+        for(const backgroundChange of bgChange){
+            backgroundChange.style.backgroundColor='green';
+            backgroundChange.style.border='5px solid yellow';
+        }
+
+        //Class or Id
+        //Just Selected First Element
+        const fontStyle = document.querySelector(".bg-change");
+        fontStyle.style.fontSize = '10px';
+
+        //Class or Id
+        //Selected All Elements
+        const allTextMargin = document.querySelectorAll('.bg-change');
+        for(const textMargin of allTextMargin){
+            textMargin.style.margin='20px';
+        }
+    </script>
+</body>
+</html>
